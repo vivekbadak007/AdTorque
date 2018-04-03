@@ -1,0 +1,14 @@
+1. Adwords -Account Performance Report [last six months]
+SELECT Date,Ctr,Clicks,ConversionRate,Conversions,Cost,CostPerConversion,Impressions,SearchImpressionShare,ConversionValue,AveragePosition FROM ACCOUNT_PERFORMANCE_REPORT DURING {date.addMonths(-6).startOfMonth.format('yyyyMMdd')},{date.today.format('yyyyMMdd')}
+
+2. conversion Category type -Account Performance Report [last 6 months]
+SELECT ConversionCategoryName,Conversions,Date FROM ACCOUNT_PERFORMANCE_REPORT DURING {date.addMonths(-6).startOfMonth.format('yyyyMMdd')},{date.today.format('yyyyMMdd')}
+
+3. Clicks and Device - Account Performance Report
+SELECT Date,Clicks,Device FROM ACCOUNT_PERFORMANCE_REPORT DURING {date.addMonths(-6).startOfMonth.format('yyyyMMdd')},{date.today.format('yyyyMMdd')}
+
+4. Adwords - Campaign Performance Report [Last six Months]
+SELECT Date,CampaignName,Clicks,Impressions,Cost,AverageCpc,AveragePosition,NumOfflineInteractions FROM CAMPAIGN_PERFORMANCE_REPORT DURING {date.addMonths(-6).startOfMonth.format('yyyyMMdd')},{date.today.format('yyyyMMdd')}
+
+5. Top 10 Phrases - Keywords Performance Report
+SELECT Date,Clicks,Impressions,Criteria FROM KEYWORDS_PERFORMANCE_REPORT DURING {date.addMonths(-6).startOfMonth.format('yyyyMMdd')},{date.today.format('yyyyMMdd')}
